@@ -1,1 +1,11 @@
-theme: jekyll-theme-minimal
+title: Some random notes
+description: >-
+  This is the place where I write stuff before I forget.
+baseurl: "/"
+domain: rjrpaz.github.io
+url: http://rjrpaz.github.io
+github_username:  rjrpaz
+theme: minima
+plugins:
+  - jekyll-feed
+
