@@ -8,4 +8,5 @@ github_username:  rjrpaz
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
 
