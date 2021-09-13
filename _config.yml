@@ -1,6 +1,6 @@
 title: Some random notes
 description: >-
-  This is the place where I write stuff before I forget.
+ Some random notes
 baseurl: "/"
 domain: rjrpaz.github.io
 url: http://rjrpaz.github.io
@@ -8,4 +8,3 @@ github_username:  rjrpaz
 theme: minima
 plugins:
   - jekyll-feed
-
