@@ -5,7 +5,7 @@ date:   2017-11-03 00:00:00 -0300
 categories: networking scripting windows wifi
 ---
 
-Something odd happens on a few embedded equipments with Windows 10. Wifi interface just stop working. AP was working fine, but interface just stop sending or receiveng data.
+Something odd happens on a few embedded equipments with Windows 10. Wifi interface just stop working. AP was working fine, but interface just stop sending or receiving data.
 
 After a few manual tests I could confirm a few facts:
 

@@ -40,7 +40,7 @@ Allows to get information from the VMWare cluster:
 
 Allows to manage VM snapshots:
 
-- get list of snaphots
+- get list of snapshots
 - take a snapshot
 - remove a snapshot
 - revert VM to a specific snapshot
@@ -51,7 +51,7 @@ Allows to manage disks:
 - delete last added disk
 - resize a disk
 
-## Some toughts about this project
+## Some thoughts about this project
 
 This playbooks use the community edition of the ansible modules: [https://github.com/ansible-collections/community.vmware](https://github.com/ansible-collections/community.vmware)
 
