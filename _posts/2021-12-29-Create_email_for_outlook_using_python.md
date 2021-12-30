@@ -9,14 +9,41 @@ This is an example of how to use python using outlook.
 
 There are some cases when we need to use an email client to send an email instead of sending it using a python script in batch mode (typically using SMTP or SMTPAuth).
 
-The script uses win32 calls to connect to Outlook.
+The script uses win32 calls to connect to Outlook, so this will run in Windows environments only.
 
-Python script:
+## Install required libraries
+
+I'm assuming you already installed Python3 in your Windows box.
+
+You can create a virtual env to run the script. First, install the virtualenv module from a DOS console as follows:
+
+```console
+pip install virtualenv
+```
+
+Now create the virtualenv:
+
+```console
+virtualenv venv
+```
+
+Start the virtualenv:
+
+```console
+venv\Scripts\activate.bat
+```
+
+Inside virtualenv, install *pywin32* module:
+
+```console
+pip install pywin32
+```
+
+The virtual environment is ready to run a script like the following:
 
 ```console
 #!/usr/bin/env python
 import sys
-import xlrd
 import win32com.client as client
 
 html_body = """
@@ -41,14 +68,20 @@ def create_email(recipient, cc):
     message = outlook.CreateItem(0)
     message.To = recipient
     message.CC = cc
-    message.Attachments.Add(report)
-    message.Subject = 'Open SRs report for UE - *** ' + str(percentage) + '% PAST DUE***'
-    message.HTMLBody = html_body % (delayed, total, percentage)
+#    message.Attachments.Add(file) # You can attach a file with this
+    message.Subject = 'Mail sent using python + Outlook'
+    message.HTMLBody = html_body
     message.Display()
 
 def main():
     create_email(recipient, cc)
 
 if __name__ == "__main__":
-    main() ---
+    main()
 ```
+
+The result of running this is:
+
+![Create an outlook email using python](/assets/images/Outlook from python.png)
+
+This is an email ready to checked and sent.
