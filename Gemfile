@@ -31,7 +31,7 @@ end
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 # Remove platform-specific nokogiri version
-gem "nokogiri", "~> 1.19.4"
+gem "nokogiri", "~> 1.19.5"
 
 # Add webrick for Jekyll serve
 gem "webrick", "~> 1.7"
